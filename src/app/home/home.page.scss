@@ -33,12 +33,12 @@ p {
 
 /* Slide 1 - Bienvenidos */
 .bg-color-slide {
-  background-color: #00bcd4;
-  color: white;
+  background-color: #7fb6c0;
+  color: rgb(8, 4, 4);
 }
 
 .title1 {
-  color: #ff5722;
+  color: #22201f;
   font-size: 2.5rem;
 }
 
@@ -50,7 +50,7 @@ img {
 
 /* Slide 2 - Nuestra Misión */
 swiper-slide:nth-child(2) {
-  background-color: #e91e63;
+  background-color: #221016;
   color: white;
 }
 
@@ -62,8 +62,8 @@ swiper-slide:nth-child(3) {
 
 /* Slide 4 - Envíos Rápidos */
 swiper-slide:nth-child(4) {
-  background-color: #4caf50;
-  color: white;
+  background-color: #9fcaa1;
+  color: rgb(10, 9, 9);
 }
 
 /* Slide 5 - Nuestros Servicios */
@@ -80,7 +80,7 @@ swiper-slide:nth-child(4) {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  background-color: #ffffff;
+  background-color: #e7d3d3;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -151,5 +151,3 @@ swiper-slide:nth-child(7) {
   background-color: #607d8b;
   color: white;
 }
-
-
