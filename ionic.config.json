@@ -1,0 +1,7 @@
+{
+  "name": "miTienda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
