@@ -1,0 +1,100 @@
+ion-content {
+    --background: linear-gradient(135deg, #ffffff, #ffffff); /* Fondo con gradiente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    text-align: center; /* Centrar el texto dentro del contenedor */
+  }
+  
+  ion-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  ion-avatar img {
+    width: 80px; /* Tamaño más pequeño para el avatar */
+    height: 80px;
+    border-radius: 50%; /* Mantiene la forma circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  }
+  
+  ion-item {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff; /* Color blanco para las etiquetas */
+    margin-bottom: 8px; /* Para separar el label del campo de entrada */
+  }
+  
+  ion-input {
+    --border-color: #ffffff; /* Color del borde del input */
+    --placeholder-color: #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 15px 10px; /* Ajustamos el padding para dar más espacio alrededor del texto */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido para los campos */
+    border-radius: 8px;
+    border: 2px solid #000000; /* Borde negro para los campos de input */
+    width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+    position: relative;
+  }
+  
+  ion-input:focus {
+    border-color: #000000; /* Borde negro cuando el campo está en foco (focus) */
+  }
+  
+  ion-button {
+    background-color: #ff6f61; /* Color de fondo del botón */
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%; /* Hace que el botón ocupe todo el ancho del formulario */
+  }
+  
+  ion-button:disabled {
+    background-color: #cccccc; /* Color del botón cuando está deshabilitado */
+  }
+  
+  ion-label[color='danger'] {
+    font-size: 14px;
+    font-weight: normal;
+    color: #ff4747; /* Rojo para los mensajes de error */
+  }
+  
+  h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+
+  
+  
+  
+  
+  
+  

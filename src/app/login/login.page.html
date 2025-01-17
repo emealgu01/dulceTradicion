@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-avatar>
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+
+  <form [formGroup]="loginForm">
+    <!-- Campo de correo -->
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input placeholder="ejemplo@email.com" formControlName="email"></ion-input>
+    </ion-item>
+    <div *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.invalid">
+      <ng-container *ngFor="let error of emailErrors.email">
+        <ion-label color="danger" *ngIf="loginForm.get('email')?.hasError(error.type)">
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+
+    <!-- Campo de contraseña -->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.invalid">
+      <ng-container *ngFor="let error of passwordErrors">
+        <ion-label color="danger" *ngIf="loginForm.get('password')?.hasError(error.type)">
+          {{ error.message }}
+        </ion-label>
+      </ng-container>
+    </div>
+
+    <!-- Botón de envío -->
+    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+  </form>
+</ion-content>
