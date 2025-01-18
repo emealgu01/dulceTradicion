@@ -9,7 +9,8 @@
     <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
   </ion-avatar>
 
-  <form [formGroup]="loginForm">
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)"> <!-- AGREGADO: (ngSubmit) PARA ENVIAR EL FORMULARIO -->
+
     <!-- Campo de correo -->
     <ion-item>
       <ion-label position="floating">Correo</ion-label>
@@ -37,6 +38,15 @@
     </div>
 
     <!-- Botón de envío -->
-    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+    <ion-button 
+    expand="full" 
+    type="submit" 
+     
+    >Iniciar sesión</ion-button>
   </form>
+
+ <p>{{errorMessage}}</p>
 </ion-content>
+
+<!-- En la etiqueta del boton linea 44 elimino este atributo [disabled]="loginForm.invalid" 
+ para que no se aplique y el botón siempre estará habilitado.-->

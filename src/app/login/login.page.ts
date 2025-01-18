@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +12,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
+  errorMessage: any;
 
   // Errores de validación para el correo
   emailErrors = {
@@ -24,7 +28,13 @@ export class LoginPage implements OnInit {
     { type: 'minlength', message: 'La contraseña debe tener al menos 6 caracteres' }
   ];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private navCtrl: NavController,
+    private storage: Storage
+  
+  ) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -37,5 +47,19 @@ export class LoginPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  // AGREGADO: METODO PARA MANEJAR EL ENVÍO DEL FORMULARIO
+  loginUser(credentials: any) {
+    this.authService.login(credentials).then(res => {
+      console.log(res);  // Login exitoso
+      this.errorMessage = '';
+      this.storage.set('isUserLoggedIn', true);
+      this.navCtrl.navigateForward('/home');
+    }).catch(error => {
+      console.error(error);  // Login fallido
+      this.errorMessage = error;
+    });
+  }
 }

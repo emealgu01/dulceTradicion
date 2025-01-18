@@ -1,160 +1,161 @@
 /* General */
 swiper-container {
-    width: 100%;
-    height: 100%;
-  }
-  
-  swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f9f9f9;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1rem;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  /* Slide 1 - Bienvenidos */
-  .bg-color-slide {
-    background-color: #7fb6c0;
-    color: rgb(8, 4, 4);
-  }
-  
-  .title1 {
-    color: #22201f;
-    font-size: 2.5rem;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-  
-  /* Slide 2 - Nuestra Misión */
-  swiper-slide:nth-child(2) {
-    background-color: #221016;
-    color: white;
-  }
-  
-  /* Slide 3 - Productos destacados */
-  swiper-slide:nth-child(3) {
-    background-color: #9c27b0;
-    color: white;
-  }
-  
-  /* Slide 4 - Envíos Rápidos */
-  swiper-slide:nth-child(4) {
-    background-color: #9fcaa1;
-    color: rgb(10, 9, 9);
-  }
-  
-  /* Slide 5 - Nuestros Servicios */
-  .services-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-  }
-  
-  .services-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    background-color: #e7d3d3;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .check-icon {
-    color: #4caf50;
-    font-size: 1.5rem;
-    margin-right: 10px;
-  }
-  
-  .services-list li h2 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  
-  .services-list li p {
-    font-size: 1rem;
-    margin-top: 5px;
-  }
-  
-  /* Slide 6 - Ofertas Especiales */
-  .promotions-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-    max-width: 900px;
-  }
-  
-  .promotion-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: center;
-  }
-  
-  .promotion-card h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-  }
-  
-  .promotion-icon {
-    font-size: 2rem;
-    color: #ff5722;
-  }
-  
-  .promo-btn {
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-  
-  .promo-btn:hover {
-    background-color: #e64a19;
-  }
-  
-  /* Slide 7 - Contáctanos */
-  swiper-slide:nth-child(7) {
-    background-color: #607d8b;
-    color: white;
-  }
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 35px;
-    color: white;
+  width: 100%;
+  height: 100%;
 }
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Slide 1 - Bienvenidos */
+.bg-color-slide {
+  background-color: #7fb6c0;
+  color: rgb(8, 4, 4);
+}
+
+.title1 {
+  color: #22201f;
+  font-size: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Slide 2 - Nuestra Misión */
+swiper-slide:nth-child(2) {
+  background-color: #221016;
+  color: white;
+}
+
+/* Slide 3 - Productos destacados */
+swiper-slide:nth-child(3) {
+  background-color: #9c27b0;
+  color: white;
+}
+
+/* Slide 4 - Envíos Rápidos */
+swiper-slide:nth-child(4) {
+  background-color: #9fcaa1;
+  color: rgb(10, 9, 9);
+}
+
+/* Slide 5 - Nuestros Servicios */
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background-color: #e7d3d3;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.check-icon {
+  color: #4caf50;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.services-list li h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.services-list li p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Slide 6 - Ofertas Especiales */
+.promotions-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.promotion-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+}
+
+.promotion-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.promotion-icon {
+  font-size: 2rem;
+  color: #ff5722;
+}
+
+.promo-btn {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.promo-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Slide 7 - Contáctanos */
+swiper-slide:nth-child(7) {
+  background-color: #607d8b;
+  color: white;
+}
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 35px;
+  color: white;
+}
+
