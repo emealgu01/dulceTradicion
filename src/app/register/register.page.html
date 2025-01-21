@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Formulario de registro -->
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <!-- Campo de Usuario -->
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="username" type="text"></ion-input>
+    </ion-item>
+    <!-- Errores de usuario -->
+    <div *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('username')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Campo de Nombre -->
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <!-- Errores de nombre -->
+    <div *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.touched || registerForm.get('name')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('name')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Campo de Apellido -->
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input formControlName="lastname" type="text"></ion-input>
+    </ion-item>
+    <!-- Errores de apellido -->
+    <div *ngIf="registerForm.get('lastname')?.invalid && (registerForm.get('lastname')?.touched || registerForm.get('lastname')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('lastname')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Campo de Correo -->
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <!-- Errores de correo -->
+    <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('email')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Campo de Contraseña -->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <!-- Errores de contraseña -->
+    <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('password')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Campo de Verificación de Contraseña -->
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input formControlName="passwordConfirmation" type="password"></ion-input>
+    </ion-item>
+    <!-- Errores de confirmación de contraseña -->
+    <div *ngIf="registerForm.get('passwordConfirmation')?.invalid && (registerForm.get('passwordConfirmation')?.touched || registerForm.get('passwordConfirmation')?.dirty)">
+      <ion-text color="danger">
+        <ul>
+          <li *ngFor="let error of getErrors('passwordConfirmation')">{{ error }}</li>
+        </ul>
+      </ion-text>
+    </div>
+
+    <!-- Botón para enviar -->
+    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">Registrar</ion-button>
+  </form>
+</ion-content>
+
+
+
