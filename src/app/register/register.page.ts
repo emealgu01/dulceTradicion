@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AuthService } from '../services/auth.service';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -9,6 +10,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 })
 export class RegisterPage implements OnInit {
   registerForm: FormGroup;
+  errorMessage: any;
 
   // Definir los mensajes de error para cada campo, incluyendo el nuevo campo "username"
   formErrors = {
@@ -36,7 +38,11 @@ export class RegisterPage implements OnInit {
     ]
   };
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private navCtrl: NavController
+  ) {
     // Agregar "username" al formulario reactivo con validaciones
     this.registerForm = this.formBuilder.group({
       username: new FormControl('', [Validators.required, Validators.minLength(4)]),
@@ -48,7 +54,19 @@ export class RegisterPage implements OnInit {
     }, { validators: this.passwordMatchValidator });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+  registerUser(registerData: any) {
+   this.authService.register(registerData).then(res => {
+    console.log(res);
+    this.errorMessage = '';
+    this.navCtrl.navigateForward('/login');
+  }).catch(err => {
+    console.log(err);
+    this.errorMessage = err;
+  });
+}
 
   // Validación de que las contraseñas coinciden
   passwordMatchValidator(formGroup: FormGroup) {
