@@ -5,7 +5,9 @@
       </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
+    
   <ion-list>
       <ion-card *ngFor="let post of posts">
           <img src="{{post.image}}" class="image-post" />
@@ -24,4 +26,9 @@
           </ion-card-content>
       </ion-card>
   </ion-list>
+  <ion-fab vertical="botton" horizontal="end" slot="fixed"> 
+    <ion-fab-button (click)="addPost()">
+        <ion-icon name="add"></ion-icon> 
+    </ion-fab-button>
+    </ion-fab>
 </ion-content>

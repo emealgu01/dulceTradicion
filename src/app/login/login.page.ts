@@ -52,9 +52,10 @@ export class LoginPage implements OnInit {
 
   // AGREGADO: METODO PARA MANEJAR EL ENVÍO DEL FORMULARIO
   loginUser(credentials: any) {
-    this.authService.login(credentials).then(res => {
+    this.authService.login(credentials).then((res: any) => {
       console.log(res);  // Login exitoso
       this.errorMessage = '';
+      this.storage.set('user', res.user);
       this.storage.set('isUserLoggedIn', true);
       this.navCtrl.navigateForward('/menu/home');
     }).catch(error => {

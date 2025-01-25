@@ -56,12 +56,13 @@ export class AuthService {
         "user": {
           "email": data.email,
           "password": data.password,
-          "password_confirmation": data.password_confirmation,
+          "password_confirmation": data.passwordConfirmation,
           "name": data.name,
-          "last_name": data.last_name,
+          "last_name": data.lastname,
           "username": data.username
         }
       }
+      console.log(params,"params")
       this.http.post(`${this.urlServer}/signup`, params, this.httpHeaders).subscribe(
         (data: any)=>{
           console.log(data);

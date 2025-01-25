@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center-content">
+  <div class="avatar-container">
+    <ion-avatar (click)="takePhoto()">
+      <img [src]="user_data.image" />
+    </ion-avatar>
+    <h1>{{user_data.name}} {{user_data.last_name}}</h1>
+  </div>
+  <p class="username">Usuario: {{user_data.username}}</p>
+
+  <div class="stats-container">
+    <p class="followers">Seguidores: {{user_data.followed_users.length}}</p>
+    <p class="following">Siguiendo: {{user_data.following_users.length}}</p>
+  </div>
+</ion-content>
+

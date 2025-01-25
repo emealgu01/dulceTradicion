@@ -1,0 +1,88 @@
+ion-content {
+    background: linear-gradient(135deg, #f0f4f8, #c3d2e0); 
+    color: #333; 
+  }
+  
+  
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  .avatar-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ion-avatar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #fff; 
+  }
+  
+  h1 {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    color: #444; 
+    font-weight: bold;
+  }
+  
+ 
+  .username {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .stats-container p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555; 
+  }
+  
+  .followers {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .following {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  ion-toolbar {
+    --background: #3a4f6c; 
+    --color: white; 
+  }
+  
+  ion-buttons {
+    --color: white;
+  }
+  
+  
+  ion-toolbar h1 {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  
+  
+  

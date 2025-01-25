@@ -6,7 +6,7 @@
 
 <ion-content>
   <!-- Formulario de registro -->
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
 
     <!-- Campo de Usuario -->
     <ion-item>

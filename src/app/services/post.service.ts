@@ -30,4 +30,23 @@ export class PostService {
     });
   }
 
+  createPost(post_data: any){
+    return new Promise((accept, reject)=> {
+      this.http.post(`${this.urlServer}/posts`,  this.httpHeaders).subscribe(
+        (data: any)=>{
+          accept(data);
+        },
+        (error) => {
+          console.log(error, 'error');
+          if (error.status == 500){
+            reject('Error Porfavor intenta mas tarde');
+          } else{
+            reject('Error al obtener los posts');
+          }
+        
+        }
+      )
+    });
+  }
+
 }

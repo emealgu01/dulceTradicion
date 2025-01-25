@@ -58,6 +58,7 @@ export class RegisterPage implements OnInit {
 
   }
   registerUser(registerData: any) {
+    console.log(registerData)
    this.authService.register(registerData).then(res => {
     console.log(res);
     this.errorMessage = '';
@@ -75,9 +76,9 @@ export class RegisterPage implements OnInit {
   
     // Si las contraseñas no coinciden, se debe retornar el error
     if (password !== passwordConfirmation) {
-      return { passwordMismatch: true }; // Indicamos que las contraseñas no coinciden
+      return { passwordMismatch: true }; 
     }
-    return null; // Si las contraseñas coinciden, no hay error, retornamos null
+    return null; 
   }
 
   // Obtener errores de validación
@@ -93,16 +94,6 @@ export class RegisterPage implements OnInit {
       }
     }
     return errors;
-  }
-
-  // Función de submit
-  onSubmit() {
-    if (this.registerForm.valid) {
-      console.log('Formulario válido', this.registerForm.value);
-      // Aquí puedes manejar el registro (llamar a un servicio, etc.)
-    } else {
-      console.log('Formulario no válido');
-    }
   }
 }
 
