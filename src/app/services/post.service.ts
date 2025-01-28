@@ -16,7 +16,7 @@ export class PostService {
     return new Promise((accept, reject) => {
       this.http.get(`${this.urlServer}/posts`,  this.httpHeaders).subscribe(
         (data: any)=>{
-          accept(data); // Pasamos los datos recibidos a la promesa
+          accept(data); 
         },
         (error) => {
           console.log(error, 'error');
@@ -32,7 +32,7 @@ export class PostService {
 
   createPost(post_data: any){
     return new Promise((accept, reject)=> {
-      this.http.post(`${this.urlServer}/posts`,  this.httpHeaders).subscribe(
+      this.http.post(`${this.urlServer}/posts`, post_data, this.httpHeaders).subscribe(
         (data: any)=>{
           accept(data);
         },

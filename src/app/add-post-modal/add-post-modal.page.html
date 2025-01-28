@@ -9,13 +9,14 @@
     <div (click)="uploadPhone()">
       <img [src]="post_image ? post_image : 'assets/images/agregar_imagen.jpg'"/>
       <p *ngIf="!post_image">Haz clic para subir una imagen</p>
+      <p *ngIf="!post_image">La imagen es obligatoria</p>
     </div>
   
     <ion-item>
       <ion-textarea label="Descripción del post" 
         labelPlacement="floating" 
         placeholder="Cuenta lo que estás pensando" 
-        formControlName="descripción">
+        formControlName="description">
       </ion-textarea>
       
     </ion-item>

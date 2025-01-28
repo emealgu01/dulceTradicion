@@ -49,7 +49,7 @@ addPostForm: FormGroup;
     const post_param = {
       post: {
          description: post_data.description,
-         image: post_data.image,
+         image: post_data.Image,
          user_id: user.id
         }
        } 
@@ -57,7 +57,7 @@ addPostForm: FormGroup;
        this.postService.createPost(post_param).then(
         (data:any) => {
           console.log(data,'post creado');
-          this.modalController.dismiss({null: null});
+          this.modalController.dismiss({post: data});
         },
         (error) => {
           console.log(error,'error');
