@@ -1,10 +1,10 @@
 ion-header {
-    background-color: #4caf50;  /* Color de fondo de la cabecera */
+    background-color: #c5728b;  /* Color de fondo de la cabecera */
     color: white;
   }
   
   ion-toolbar {
-    --background: #4caf50;  /* Color de fondo de la barra de herramientas */
+    --background: #af4c89;  /* Color de fondo de la barra de herramientas */
   }
   
   ion-title {
@@ -15,7 +15,7 @@ ion-header {
   }
   
   ion-content {
-    --background: #f5f5f5;  /* Fondo claro para el contenido */
+    --background: #ac1547;  /* Fondo claro para el contenido */
     padding: 20px;
   }
   
@@ -26,7 +26,7 @@ ion-header {
   }
   
   ion-item {
-    --highlight-background: #4caf50;
+    --highlight-background: #504c4e;
   }
   
   ion-label {
@@ -40,7 +40,7 @@ ion-header {
   }
   
   ion-button {
-    background-color: #4caf50;
+    background-color: #b41b74;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -51,12 +51,12 @@ ion-header {
   }
   
   ion-button[disabled] {
-    background-color: #c8e6c9;  /* Color para el botón deshabilitado */
+    background-color: #bd3a77;  /* Color para el botón deshabilitado */
   }
   
   ion-text.color-danger {
     font-size: 14px;
-    color: #f44336;
+    color: #8a8483;
     padding-left: 10px;
   }
   

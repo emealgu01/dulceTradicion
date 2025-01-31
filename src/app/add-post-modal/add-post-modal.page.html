@@ -1,21 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Crear Nuevo Post</ion-title>
+    <ion-title>Agregar publicación</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <form [formGroup]="addPostForm" (ngSubmit)="addPost(addPostForm.value)">
     <div (click)="uploadPhone()">
-      <img [src]="post_image ? post_image : 'assets/images/agregar_imagen.jpg'"/>
-      <p *ngIf="!post_image">Haz clic para subir una imagen</p>
-      <p *ngIf="!post_image">La imagen es obligatoria</p>
+      <img [src]="post_image ? post_image : 'assets/images/Avatar.png'"/>
+      <p *ngIf="!post_image">Haz clic para subir una foto</p>
+      
     </div>
   
     <ion-item>
-      <ion-textarea label="Descripción del post" 
+      <ion-textarea label="Descripción de la publicación" 
         labelPlacement="floating" 
-        placeholder="Cuenta lo que estás pensando" 
+        placeholder="Comenta sobre esto" 
         formControlName="description">
       </ion-textarea>
       

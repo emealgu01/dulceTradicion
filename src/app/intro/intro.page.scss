@@ -1,4 +1,4 @@
-/* General */
+
 swiper-container {
   width: 100%;
   height: 100%;
@@ -31,9 +31,9 @@ p {
   line-height: 1.5;
 }
 
-/* Slide 1 - Bienvenidos */
+
 .bg-color-slide {
-  background-color: #7fb6c0;
+  background-color: #dd7ed8;
   color: rgb(8, 4, 4);
 }
 
@@ -48,107 +48,25 @@ img {
   margin: 10px 0;
 }
 
-/* Slide 2 - Nuestra Misión */
 swiper-slide:nth-child(2) {
-  background-color: #221016;
+  background-color: #d35157;
   color: white;
 }
 
-/* Slide 3 - Productos destacados */
+
 swiper-slide:nth-child(3) {
-  background-color: #9c27b0;
+  background-color: #eb672a;
   color: white;
 }
 
-/* Slide 4 - Envíos Rápidos */
 swiper-slide:nth-child(4) {
-  background-color: #9fcaa1;
+  background-color: #6e260ffb;
   color: rgb(10, 9, 9);
 }
 
-/* Slide 5 - Nuestros Servicios */
-.services-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  max-width: 600px;
-  margin-top: 15px;
-}
 
-.services-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  background-color: #e7d3d3;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.check-icon {
-  color: #4caf50;
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.services-list li h2 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.services-list li p {
-  font-size: 1rem;
-  margin-top: 5px;
-}
-
-/* Slide 6 - Ofertas Especiales */
-.promotions-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 900px;
-}
-
-.promotion-card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  text-align: center;
-}
-
-.promotion-card h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-.promotion-icon {
-  font-size: 2rem;
-  color: #ff5722;
-}
-
-.promo-btn {
-  background-color: #ff5722;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-.promo-btn:hover {
-  background-color: #e64a19;
-}
-
-/* Slide 7 - Contáctanos */
 swiper-slide:nth-child(7) {
-  background-color: #607d8b;
+  background-color: #83e293;
   color: white;
 }
 .close-icon {
